@@ -1,0 +1,26 @@
+﻿@page
+@model MyProject.Pages.CreditPages.IndexModel
+@{
+}
+
+<h2>Vyplněné Známkování (@Model.Credits.Count())</h2>
+
+<div class="row">
+    <div class="col">Datum</div>
+    <div class="col">Splnil</div>
+    <div class="col">
+        Známka
+    </div>
+</div>
+
+@foreach (var item in Model.Credits)
+{
+    <hr />
+    <div class="row">
+        <div class="col">@item.Created</div>
+        <div class="col">@item.Success</div>
+        <div class="col">
+            @item.Value
+        </div>
+    </div>
+}
