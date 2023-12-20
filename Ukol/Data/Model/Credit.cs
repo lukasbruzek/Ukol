@@ -13,6 +13,7 @@ namespace MyProject.Data.Model
 
         [DisplayName("Hodnocení")]
         [Required(ErrorMessage = "Toto pole je povinné")]
+        [Range(1, 5, ErrorMessage = "Hodnota musí být mezi 1 a 5.")]
         public int Value { get; set; }
         
         [DisplayName("Uspěl")]
